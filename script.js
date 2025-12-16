@@ -11,13 +11,16 @@ document.querySelectorAll("a.nav-link").forEach(anchor => {
 });
 
 // Smooth Scroll for "Contact Me" Button
-document.querySelector(".btn-primary").addEventListener("click", function (e) {
-  e.preventDefault();
-  document.getElementById("contact").scrollIntoView({
-    behavior: "smooth",
-    block: "start"
+const contactButton = document.querySelector('a[href="#contact"]');
+if (contactButton) {
+  contactButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   });
-});
+}
 
 // ScrollSpy Active Class Handling
 window.addEventListener("scroll", () => {
@@ -38,7 +41,11 @@ window.addEventListener("scroll", () => {
 });
 
 // Coding Animation
-const phrases = ["Hi, I am Dipanshu"];
+const phrases = [
+  '"Hi, I\'m Dipanshu";',
+  '"Full-stack Developer";',
+  '"AI / ML Enthusiast";'
+];
 let phraseIndex = 0;
 let letterIndex = 0;
 let currentPhrase = "";
@@ -71,18 +78,35 @@ document.addEventListener("DOMContentLoaded", () => {
   typeCodingEffect();
 });
 
-// Form Validation
+// Form Validation and Submission
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
+  const formStatus = document.getElementById("form-status");
 
-  if (name && email && subject && message) {
-    alert("Thank you for contacting me. I will get back to you soon!");
-    this.reset();
+  if (name && email && message) {
+    // Show loading state
+    formStatus.textContent = "Sending message...";
+    formStatus.className = "text-center p-4 rounded-lg bg-blue-100 text-blue-700";
+    formStatus.classList.remove("hidden");
+
+    // Simulate form submission (replace with actual backend call)
+    setTimeout(() => {
+      formStatus.textContent = "Thank you for contacting me! I will get back to you soon.";
+      formStatus.className = "text-center p-4 rounded-lg bg-green-100 text-green-700";
+      this.reset();
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        formStatus.classList.add("hidden");
+      }, 5000);
+    }, 1000);
   } else {
-    alert("Please fill in all fields.");
+    formStatus.textContent = "Please fill in all fields.";
+    formStatus.className = "text-center p-4 rounded-lg bg-red-100 text-red-700";
+    formStatus.classList.remove("hidden");
   }
 });
 

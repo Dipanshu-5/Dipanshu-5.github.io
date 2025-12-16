@@ -1,394 +1,217 @@
-<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dipanshu Kapri — Portfolio</title>
-  <meta name="description" content="Final‑year CSE student skilled in Web, AI/ML, and Data—projects, skills, and contact." />
-  <meta name="author" content="Dipanshu Kapri" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Dipanshu's Portfolio showcasing expertise in web development, AI and ML. Skills include Python, JavaScript, Node.js, and more.">
+  <meta name="author" content="Dipanshu">
+  <title>Dipanshu's Portfolio</title>
+  <link rel="icon" type="image/jpg"
+    href="https://pbs.twimg.com/profile_images/1816474701360685056/-JaD_SYC_400x400.jpg">
 
-  <!-- SEO & Social -->
-  <link rel="canonical" href="https://example.com/" />
-  <meta property="og:title" content="Dipanshu Kapri — Portfolio" />
-  <meta property="og:description" content="Web Dev · AI/ML · Data. Selected projects and ways to reach me." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://pbs.twimg.com/profile_images/1816474701360685056/-JaD_SYC_400x400.jpg" />
-  <meta name="theme-color" content="#0ea5e9" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Preconnects -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap (kept for utilities/grid) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <style>
-    :root{
-      --bg: #0b1220;        /* deep navy */
-      --surface: #0f172a;   /* slate-900 */
-      --muted: #94a3b8;     /* slate-400 */
-      --text: #e2e8f0;      /* slate-200 */
-      --brand: #0ea5e9;     /* sky-500 */
-      --brand-2: #22d3ee;   /* cyan-400 */
-      --ring: rgba(14,165,233,.35);
-    }
-    html{scroll-behavior:smooth}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    a{color:var(--brand)} a:hover{color:var(--brand-2)}
-
-    /* Navbar */
-    .site-nav{backdrop-filter:saturate(180%) blur(10px);background:rgba(2,6,23,.6)}
-    .site-nav .nav-link{color:var(--text);opacity:.8}
-    .site-nav .nav-link.active,.site-nav .nav-link:hover{opacity:1}
-
-    /* Hero */
-    .hero{position:relative;min-height:78vh;display:grid;place-items:center;text-align:center;overflow:hidden}
-    .hero:before{content:"";position:absolute;inset:-40% -10%;background:radial-gradient(60rem 60rem at 50% -10%, rgba(34,211,238,.25), transparent 50%), radial-gradient(40rem 40rem at 100% 0%, rgba(14,165,233,.18), transparent 60%)}
-    .avatar{width:88px;height:88px;border-radius:999px;box-shadow:0 0 0 4px rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.08)}
-    .kicker{letter-spacing:.2em;color:var(--brand-2);text-transform:uppercase;font-weight:700}
-    .title{font-weight:800;font-size:clamp(32px,6vw,54px);line-height:1.1}
-    .subtitle{max-width:54ch;margin-inline:auto;color:var(--muted)}
-    .cta{gap:.75rem}
-    .btn-brand{background:var(--brand);color:#001018;border:none}
-    .btn-brand:hover{background:var(--brand-2);color:#001018}
-    .chip{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .75rem;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:var(--muted)}
-
-    /* Sections */
-    section{scroll-margin-top:84px;padding-block:64px}
-    .section-title{font-weight:800;letter-spacing:.02em}
-    .section-sub{color:var(--muted)}
-
-    /* Cards */
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px}
-    .card:hover{box-shadow:0 10px 30px rgba(14,165,233,.12)}
-    .badge-skill{background:rgba(14,165,233,.15);border:1px solid rgba(14,165,233,.35);color:#bff2ff}
-
-    /* Timeline (Experience) */
-    .timeline{position:relative}
-    .timeline:before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:linear-gradient(var(--brand),transparent)}
-    .tl-item{position:relative;padding-left:36px;margin-bottom:20px}
-    .tl-bullet{position:absolute;left:2px;top:.35rem;width:16px;height:16px;border-radius:999px;background:var(--brand);box-shadow:0 0 0 6px rgba(14,165,233,.15)}
-
-    /* Contact */
-    .form-control{background:#0b1329;border:1px solid rgba(255,255,255,.12);color:var(--text)}
-    .form-control:focus{border-color:var(--brand);box-shadow:0 0 0 .25rem var(--ring)}
-
-    /* Footer */
-    footer{color:var(--muted)}
-
-    /* Reveal animation */
-    .reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease, transform .6s ease}
-    .reveal.visible{opacity:1;transform:none}
-
-    /* Accessibility - prefers-reduced-motion */
-    @media (prefers-reduced-motion: reduce){
-      *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- Nav -->
-  <nav class="navbar navbar-expand-lg site-nav sticky-top border-bottom border-opacity-10">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#" aria-label="Homepage">
-        <img class="avatar" src="https://pbs.twimg.com/profile_images/1816474701360685056/-JaD_SYC_400x400.jpg" alt="Dipanshu Kapri profile" loading="eager" decoding="async" />
-        <span class="fw-bold">Dipanshu</span>
+
+<body class="scroll-smooth" tabindex="0">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg" role="navigation"
+    aria-label="Main navigation">
+    <div class="container mx-auto px-3 py-2 flex items-center justify-between">
+      <a href="#" class="flex items-center" aria-label="Dipanshu's Portfolio Home">
+        <img src="https://pbs.twimg.com/profile_images/1816474701360685056/-JaD_SYC_400x400.jpg" alt="Dipanshu's Logo"
+          width="50" height="50"
+          class="rounded-full hover:scale-110 transition-transform duration-300 hover:shadow-[0_0_10px_rgb(23,182,255)]">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+      <ul class="flex space-x-6">
+        <li><a
+            class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
+            href="#about">About</a></li>
+        <li><a
+            class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
+            href="#skills">Skills</a></li>
+        <li><a
+            class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
+            href="#projects">Projects</a></li>
+        <li><a
+            class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
+            href="#contact">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero container py-5">
-    <div class="position-relative reveal visible">
-      <p class="kicker mb-3"><i class="fa-solid fa-bolt"></i> Open to SDE · Data · AI roles</p>
-      <h1 class="title mb-3" aria-live="polite"><span id="typed"></span><span class="visually-hidden"> — Dipanshu Kapri</span></h1>
-      <p class="subtitle mb-4">Final‑year B.Tech (CSE) @ SRM IST. I build reliable web apps, explore AI/ML, and turn messy data into crisp visuals.</p>
-      <div class="d-flex justify-content-center cta">
-        <a class="btn btn-brand btn-lg" href="#contact" data-scroll>Contact Me</a>
-        <a class="btn btn-outline-light btn-lg" href="https://drive.google.com/file/d/1PfHp1MGQVLOR0cwB6ODaPp6ViVlIWGG3/view" target="_blank" rel="noreferrer">Resume</a>
-      </div>
-      <div class="mt-4">
-        <span class="chip"><i class="fa-solid fa-location-dot"></i> Remote & On‑site</span>
-        <span class="chip ms-2"><i class="fa-solid fa-code"></i> Python · JS · Node · SQL</span>
-      </div>
-    </div>
-  </header>
-
-  <!-- About -->
-  <section id="about" class="container">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-7 reveal">
-        <h2 class="section-title mb-2">About Me</h2>
-        <p class="section-sub">I love building products that feel fast, accessible, and delightful. Recently I’ve been focusing on modern JS tooling, data storytelling, and practical ML—always with an eye on clean UX.</p>
-        <ul class="list-unstyled small text-secondary">
-          <li>• <strong>Strengths:</strong> Full‑stack JS, APIs, data viz, ML basics</li>
-          <li>• <strong>Looking for:</strong> Internships / full‑time roles starting 2026</li>
-          <li>• <strong>Hobbies:</strong> Football, reading about systems design</li>
-        </ul>
-      </div>
-      <div class="col-lg-5 text-center reveal">
-        <img class="img-fluid rounded-4" src="https://i.postimg.cc/4y8DZGTB/carbon.png" alt="Code preview screenshot" loading="lazy" width="560" height="350" />
-      </div>
+  <!-- Hero Section -->
+  <section class="hero-section text-white text-center py-20 flex items-center justify-center min-h-[90vh]"
+    role="banner">
+    <div class="container mx-auto px-4">
+      <h1 id="animated-coding" class="text-5xl md:text-6xl font-bold mb-8">
+        <span class="text-[#64ffda] font-mono">const intro = </span>
+        <span id="coding-animation" class="font-mono"></span>
+        <span class="cursor" aria-hidden="true">|</span>
+      </h1>
+      <img src="https://i.postimg.cc/4y8DZGTB/carbon.png" class="mx-auto max-w-full w-[650px]" width="650"
+        alt="Code snippet showing Dipanshu's portfolio introduction"><br>
+      <a href="#contact"
+        class="inline-block bg-[#00a3e0] text-white px-8 py-4 rounded-lg text-lg font-medium mt-6 hover:bg-[#00387c] hover:scale-105 transition-all duration-300 animate-pulse"
+        aria-label="Navigate to contact section">Contact Me</a>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="container">
-    <h2 class="section-title mb-2">Skills</h2>
-    <p class="section-sub mb-4">A snapshot of tools I work with.</p>
-    <div class="row g-3">
-      <div class="col-md-4 reveal">
-        <div class="card h-100 p-4">
-          <h5 class="fw-bold mb-3"><i class="fa-solid fa-code me-2"></i>Programming</h5>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="badge badge-skill">C</span>
-            <span class="badge badge-skill">C++</span>
-            <span class="badge badge-skill">Python</span>
-            <span class="badge badge-skill">JavaScript</span>
-          </div>
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-50" aria-labelledby="about-heading">
+    <div class="container mx-auto px-4 text-center">
+      <h2 id="about-heading" class="text-4xl font-bold text-[#00387c] uppercase mb-6">About Me</h2>
+      <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">I am a B.Tech Computer Science
+        Engineering student at SRM IST, passionate about innovation and technology with hands-on experience in Web
+        development, data analysis, AI and Machine Learning. I am passionate about leveraging technology to solve
+        real-world problems and I am eager to contribute to innovative projects.</p>
+      <button
+        onclick="window.open('https://drive.google.com/file/d/1KjoZjdCVHg4wpem3grvsqrspEoGQRHKI/view?usp=sharing');"
+        class="bg-[#00a3e0] text-white px-8 py-4 rounded-lg text-lg font-medium mt-6 hover:bg-[#00387c] hover:scale-105 transition-all duration-300 animate-pulse"
+        aria-label="View Dipanshu's resume">Resume</button>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-white py-20" aria-labelledby="skills-heading">
+    <div class="container mx-auto px-4">
+      <h2 id="skills-heading" class="text-4xl font-bold text-[#00387c] uppercase mb-12 text-center">Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="skill-card">
+          <i class="fas fa-code text-6xl mb-4 text-blue-600 hover:scale-125 transition-transform duration-300"
+            aria-hidden="true"></i>
+          <h4 class="text-xl font-semibold mb-2">Programming Languages</h4>
+          <p class="text-gray-700">C, C++, Python, JavaScript</p>
         </div>
-      </div>
-      <div class="col-md-4 reveal">
-        <div class="card h-100 p-4">
-          <h5 class="fw-bold mb-3"><i class="fa-solid fa-brain me-2"></i>AI / Data</h5>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="badge badge-skill">Machine Learning</span>
-            <span class="badge badge-skill">LLMs</span>
-            <span class="badge badge-skill">Generative AI</span>
-            <span class="badge badge-skill">Power BI</span>
-          </div>
+        <div class="skill-card">
+          <i class="fas fa-brain text-6xl mb-4 text-cyan-500 hover:scale-125 transition-transform duration-300"
+            aria-hidden="true"></i>
+          <h4 class="text-xl font-semibold mb-2">AI</h4>
+          <p class="text-gray-700">Machine Learning, LLM, Generative AI, Power BI</p>
         </div>
-      </div>
-      <div class="col-md-4 reveal">
-        <div class="card h-100 p-4">
-          <h5 class="fw-bold mb-3"><i class="fa-solid fa-globe me-2"></i>Web</h5>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="badge badge-skill">HTML</span>
-            <span class="badge badge-skill">CSS</span>
-            <span class="badge badge-skill">Bootstrap</span>
-            <span class="badge badge-skill">Node.js</span>
-            <span class="badge badge-skill">SQL</span>
-          </div>
+        <div class="skill-card">
+          <i class="fas fa-globe text-6xl mb-4 text-blue-700 hover:scale-125 transition-transform duration-300"
+            aria-hidden="true"></i>
+          <h4 class="text-xl font-semibold mb-2">Web Development</h4>
+          <p class="text-gray-700">HTML, CSS, Tailwind, JavaScript, NodeJS, SQL</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="container">
-    <h2 class="section-title mb-2">Selected Projects</h2>
-    <p class="section-sub mb-4">Highlights from web and AI/ML work.</p>
-    <div class="row g-4">
-      <div class="col-md-4 reveal">
-        <article class="card h-100">
-          <img class="card-img-top" src="https://cdn.motocms.com/src/868x580/68100/68194-original-1200.jpg" alt="Library website screenshot" loading="lazy" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Library Website</h5>
-            <p class="flex-grow-1">Full‑stack library portal with Node/Express, Bootstrap UI, and a Postgres backend for catalog & user accounts.</p>
-            <div class="d-flex gap-2 small mb-3">
-              <span class="badge text-bg-dark">Node</span>
-              <span class="badge text-bg-dark">Bootstrap</span>
-              <span class="badge text-bg-dark">Postgres</span>
-            </div>
-            <div class="d-flex gap-2">
-              <a class="btn btn-sm btn-brand" href="#" aria-label="Live demo">Live</a>
-              <a class="btn btn-sm btn-outline-light" href="#" aria-label="Source code">Code</a>
-            </div>
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-50" aria-labelledby="projects-heading">
+    <div class="container mx-auto px-4">
+      <h2 id="projects-heading" class="text-4xl font-bold text-[#00387c] uppercase mb-12 text-center">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="project-card bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:bg-[#1cc2ff] transition-all duration-300">
+          <img src="https://cdn.motocms.com/src/868x580/68100/68194-original-1200.jpg" class="w-full h-48 object-cover"
+            alt="Library Website Project - Modern library interface">
+          <div class="p-6">
+            <h5 class="text-xl font-semibold mb-3">Library Website</h5>
+            <p class="text-gray-700">Designed and developed a user-friendly library website using web development
+              technologies such as HTML, CSS, Bootstrap, JavaScript, and a backend framework Node.js for dynamic content
+              and database management.</p>
           </div>
-        </article>
-      </div>
-      <div class="col-md-4 reveal">
-        <article class="card h-100">
-          <img class="card-img-top" src="https://analyticsindiamag.com/wp-content/uploads/2020/03/SBI-Stock-Prediction.png" alt="Stock prediction charts" loading="lazy" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Stock Predictor (LSTM)</h5>
-            <p class="flex-grow-1">End‑to‑end pipeline: data ingestion, feature engineering, LSTM training, and error analysis; delivered explorable plots.</p>
-            <div class="d-flex gap-2 small mb-3">
-              <span class="badge text-bg-dark">Python</span>
-              <span class="badge text-bg-dark">Pandas</span>
-              <span class="badge text-bg-dark">TensorFlow</span>
-            </div>
-            <div class="d-flex gap-2">
-              <a class="btn btn-sm btn-brand" href="#" aria-label="Report">Report</a>
-              <a class="btn btn-sm btn-outline-light" href="#" aria-label="Source code">Code</a>
-            </div>
+        </div>
+        <div
+          class="project-card bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:bg-[#1cc2ff] transition-all duration-300">
+          <img src="https://analyticsindiamag.com/wp-content/uploads/2020/03/SBI-Stock-Prediction.png"
+            class="w-full h-48 object-cover" alt="Stock Predictor Project - Stock market analysis visualization">
+          <div class="p-6">
+            <h5 class="text-xl font-semibold mb-3">Stock predictor - Machine Learning</h5>
+            <p class="text-gray-700">Built a stock price prediction system using LSTM networks, ensuring accurate
+              forecasts through preprocessing historical data and the incorporation of external factors such as
+              financial reports and market sentiment, we also evaluated model performance and visualized trends to
+              provide actionable insights for informed decision-making while buying stocks.
+            </p>
           </div>
-        </article>
-      </div>
-      <div class="col-md-4 reveal">
-        <article class="card h-100">
-          <img class="card-img-top" src="https://bitcoinist.com/wp-content/uploads/2024/01/Solana-200.jpeg" alt="Solana graphic" loading="lazy" />
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">CharityChain (Solana)</h5>
-            <p class="flex-grow-1">Transparent donations & audit trail; compared consensus options and built a proof‑of‑concept with a simple explorer.</p>
-            <div class="d-flex gap-2 small mb-3">
-              <span class="badge text-bg-dark">Solana</span>
-              <span class="badge text-bg-dark">TypeScript</span>
-              <span class="badge text-bg-dark">Next.js</span>
-            </div>
-            <div class="d-flex gap-2">
-              <a class="btn btn-sm btn-brand" href="#" aria-label="Live demo">Live</a>
-              <a class="btn btn-sm btn-outline-light" href="#" aria-label="Source code">Code</a>
-            </div>
+        </div>
+        <div
+          class="project-card bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:bg-[#1cc2ff] transition-all duration-300">
+          <img src="https://bitcoinist.com/wp-content/uploads/2024/01/Solana-200.jpeg" class="w-full h-48 object-cover"
+            alt="CharityChain Project - Blockchain-based charity platform">
+          <div class="p-6">
+            <h5 class="text-xl font-semibold mb-3">CharityChain Transparent Fund Tracking System</h5>
+            <p class="text-gray-700">The project explores how blockchain can improve fund raising platforms. We compared
+              various consensus algorithms to identify a hybrid blockchain platform called Solana. We created a live
+              website ultimately aiming to increase donor trust and operational effectiveness in blockchain-based
+              charity platforms.
+            </p>
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience (optional but useful for recruiters) -->
-  <section id="experience" class="container">
-    <h2 class="section-title mb-2">Experience</h2>
-    <p class="section-sub mb-4">Internships, roles, and notable contributions.</p>
-    <div class="timeline">
-      <div class="tl-item reveal">
-        <div class="tl-bullet"></div>
-        <h6 class="mb-1">Software Intern — Example Org <span class="text-secondary">(Jun–Aug 2025)</span></h6>
-        <p class="small text-secondary mb-0">Shipped an internal dashboard with role‑based access; cut report generation time by 70%.</p>
-      </div>
-      <div class="tl-item reveal">
-        <div class="tl-bullet"></div>
-        <h6 class="mb-1">Hackathon Finalist — SRM IST</h6>
-        <p class="small text-secondary mb-0">Built an ML demo around anomaly detection with clean UI and explainable metrics.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="container">
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-7 reveal">
-        <h2 class="section-title mb-2">Contact</h2>
-        <p class="section-sub">Drop a note—I'll reply within 24–48 hours.</p>
-        <form id="contactForm" class="needs-validation" novalidate>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label class="form-label" for="name">Name</label>
-              <input id="name" name="name" class="form-control" required />
-              <div class="invalid-feedback">Please enter your name</div>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label" for="email">Email</label>
-              <input id="email" name="email" type="email" class="form-control" required />
-              <div class="invalid-feedback">Please enter a valid email</div>
-            </div>
-            <div class="col-12">
-              <label class="form-label" for="message">Message</label>
-              <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-              <div class="invalid-feedback">Please write a short message</div>
-            </div>
-            <div class="col-12 d-flex gap-2">
-              <button class="btn btn-brand" type="submit">Send</button>
-              <a class="btn btn-outline-light" href="mailto:dipanshukapri25@gmail.com?subject=Hello%20Dipanshu">Email Directly</a>
-            </div>
-            <p id="formStatus" class="small mt-2 text-secondary" role="status" aria-live="polite"></p>
-          </div>
-        </form>
-      </div>
-      <div class="col-lg-5 reveal">
-        <div class="card p-4">
-          <h6 class="fw-bold mb-3">Elsewhere</h6>
-          <div class="d-flex flex-wrap gap-3">
-            <a class="text-decoration-none" href="https://linkedin.com/in/dipanshukapri" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            <a class="text-decoration-none" href="https://x.com/DipanshuKapri" target="_blank" rel="noreferrer"><i class="fa-brands fa-x-twitter"></i> X</a>
-            <a class="text-decoration-none" href="https://github.com/DipanshuKapri" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a class="text-decoration-none" href="https://instagram.com/dipanshukapri" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
-          </div>
-          <hr class="my-4" />
-          <p class="small mb-0">© <span id="year"></span> Dipanshu. All rights reserved.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="py-5 border-top border-opacity-10">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
-      <div class="small">Built with ❤️ using semantic HTML, Bootstrap utilities, and accessible components.</div>
-      <div class="d-flex gap-3">
-        <a class="text-secondary" href="#about">About</a>
-        <a class="text-secondary" href="#projects">Projects</a>
-        <a class="text-secondary" href="#contact">Contact</a>
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white py-5" aria-labelledby="contact-heading">
+    <div class="container mx-auto px-4 max-w-xl">
+      <h2 id="contact-heading" class="text-4xl font-bold text-[#00387c] uppercase mb-5 text-center">Contact Me</h2>
+      <form class="space-y-2" id="contact-form" aria-label="Contact form">
+        <div>
+          <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+          <input type="text"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00a3e0] focus:border-transparent"
+            id="name" name="name" required aria-required="true">
+        </div>
+        <div>
+          <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+          <input type="email"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00a3e0] focus:border-transparent"
+            id="email" name="email" required aria-required="true">
+        </div>
+        <div>
+          <label for="message" class="block text-gray-700 font-medium mb-5">Message</label>
+          <textarea
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00a3e0] focus:border-transparent"
+            id="message" name="message" rows="2" required aria-required="true"></textarea>
+        </div>
+        <div id="form-status" class="hidden text-center p-4 rounded-lg" role="alert" aria-live="polite"></div>
+        <button type="submit"
+          class="w-full bg-[#00a3e0] text-white px-5 py-2 rounded-lg text-lg font-medium hover:bg-[#00387c] transition-colors duration-300">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-gray-900 text-white py-5" role="contentinfo">
+    <div class="container mx-auto px-4 text-center">
+      <div class="socials flex justify-center space-x-6 mb-6">
+        <a href="https://linkedin.com/in/dipanshukapri" target="_blank" rel="noopener noreferrer"
+          class="text-white hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
+          aria-label="Visit Dipanshu's LinkedIn profile"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>
+        <a href="https://x.com/DipanshuKapri" target="_blank" rel="noopener noreferrer"
+          class="text-white hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
+          aria-label="Visit Dipanshu's Twitter profile"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/dipanshukapri" target="_blank" rel="noopener noreferrer"
+          class="text-white hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
+          aria-label="Visit Dipanshu's Instagram profile"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></a>
+        <a href="https://github.com/Dipanshu-5" target="_blank" rel="noopener noreferrer"
+          class="text-white hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
+          aria-label="Visit Dipanshu's GitHub profile"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
+        <a href="mailto:dipanshukapri25@gmail.com"
+          class="text-white hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
+          aria-label="Send email to Dipanshu"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i></a>
       </div>
+      <p class="text-gray-400">© 2025 Dipanshu. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // --- Typed headline (accessible) ---
-    const phrases = [
-      "Hi, I'm Dipanshu—Web & AI/ML",
-      "I craft fast, accessible apps",
-      "I turn data into decisions"
-    ];
-    const typedEl = document.getElementById('typed');
-    let p = 0, i = 0, del = false;
-    function type(){
-      const word = phrases[p];
-      typedEl.textContent = del ? word.slice(0, --i) : word.slice(0, ++i);
-      if(!del && i === word.length){ del = true; setTimeout(type, 1100); return; }
-      if(del && i === 0){ del = false; p = (p + 1) % phrases.length; }
-      setTimeout(type, del ? 45 : 95);
-    }
-    type();
-
-    // --- Smooth scroll & Active link ---
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(a=>a.addEventListener('click', e=>{
-      if(a.hash){ e.preventDefault(); document.querySelector(a.hash)?.scrollIntoView({behavior:'smooth', block:'start'}); }
-    }));
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          document.querySelectorAll('.nav-link').forEach(l=>l.classList.toggle('active', l.hash === '#' + entry.target.id));
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {rootMargin: '-40% 0px -50% 0px', threshold: .01});
-    document.querySelectorAll('section, header.hero, .reveal').forEach(el=>io.observe(el));
-
-    // --- Form validation (no undefined vars) ---
-    (function(){
-      const form = document.getElementById('contactForm');
-      const status = document.getElementById('formStatus');
-      form.addEventListener('submit', async (e)=>{
-        e.preventDefault();
-        if(!form.checkValidity()){
-          form.classList.add('was-validated');
-          status.textContent = 'Please fix the highlighted fields.';
-          return;
-        }
-        // Drop-in Formspree ready (replace with your endpoint), fallback to mailto
-        try{
-          status.textContent = 'Sending…';
-          // Example: await fetch('https://formspree.io/f/xxxxxxx',{method:'POST', body:new FormData(form)});
-          await new Promise(r=>setTimeout(r,600)); // demo
-          status.textContent = 'Thank you! I\'ll get back to you soon.';
-          form.reset();
-          form.classList.remove('was-validated');
-        }catch(err){
-          status.textContent = 'Could not send. Please email me directly.';
-        }
-      });
-    })();
-
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
 </body>
+
 </html>
