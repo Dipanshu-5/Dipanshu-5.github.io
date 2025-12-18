@@ -41,10 +41,9 @@ window.addEventListener("scroll", () => {
 });
 
 // Coding Animation
-const phrases = [
-  '"Hi, I\'m Dipanshu";',
-  '"Full-stack Developer";',
-  '"AI / ML Enthusiast";'
+const phrases = [ "Hi, I am Dipanshu", 
+  'Full-stack Developer',
+  'AI / ML Enthusiast'
 ];
 let phraseIndex = 0;
 let letterIndex = 0;
