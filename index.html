@@ -1,217 +1,403 @@
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Dipanshu's Portfolio showcasing expertise in web development, AI and ML. Skills include Python, JavaScript, Node.js, and more."
+		/>
+		<meta name="author" content="Dipanshu" />
+		<title>Dipanshu's Portfolio</title>
+		<link
+			rel="icon"
+			type="image/jpg"
+			href="https://pbs.twimg.com/profile_images/1816474701360685056/-JaD_SYC_400x400.jpg"
+		/>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Dipanshu's Portfolio showcasing expertise in web development, AI and ML. Skills include Python, JavaScript, Node.js, and more.">
-  <meta name="author" content="Dipanshu">
-  <title>Dipanshu's Portfolio</title>
-  <link rel="icon" type="image/jpg"
-    href="https://pbs.twimg.com/profile_images/1816474701360685056/-JaD_SYC_400x400.jpg">
+		<!-- Tailwind CSS -->
+		<script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+		<!-- Font Awesome for Icons -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			rel="stylesheet"
+		/>
 
-  <!-- Font Awesome for Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
+	<body class="scroll-smooth" tabindex="0">
+		<!-- Navbar -->
+		<nav
+			id="navbar"
+			class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg"
+			role="navigation"
+			aria-label="Main navigation"
+		>
+			<div
+				class="container mx-auto px-3 py-2 flex items-center justify-between"
+			>
+				<a
+					href="#"
+					class="flex items-center"
+					aria-label="Dipanshu's Portfolio Home"
+				>
+					<img
+						src="https://pbs.twimg.com/profile_images/1816474701360685056/-JaD_SYC_400x400.jpg"
+						alt="Dipanshu's Logo"
+						width="50"
+						height="50"
+						loading="lazy"
+						class="rounded-full hover:scale-110 transition-transform duration-300 hover:shadow-[0_0_10px_rgb(23,182,255)]"
+					/>
+				</a>
+				<ul class="flex space-x-6">
+					<li>
+						<a
+							class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
+							href="#about"
+							>About</a
+						>
+					</li>
+					<li>
+						<a
+							class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
+							href="#skills"
+							>Skills</a
+						>
+					</li>
+					<li>
+						<a
+							class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
+							href="#projects"
+							>Projects</a
+						>
+					</li>
+					<li>
+						<a
+							class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
+							href="#contact"
+							>Contact</a
+						>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-<body class="scroll-smooth" tabindex="0">
+		<!-- Hero Section -->
+		<section
+			class="hero-section text-white text-center py-20 flex items-center justify-center min-h-[90vh]"
+			role="banner"
+		>
+			<div class="container mx-auto px-4">
+				<h1 id="animated-coding" class="text-5xl md:text-6xl font-bold mb-8">
+					<span class="text-[#64ffda] font-mono">🎅</span>
+					<span id="coding-animation" class="font-mono"></span>
+					<span class="cursor" aria-hidden="true">|</span>
+				</h1>
+				<img
+					src="https://i.postimg.cc/4y8DZGTB/carbon.png"
+					class="mx-auto max-w-full w-[650px]"
+					width="650"
+					loading="lazy"
+					alt="Code snippet showing Dipanshu's portfolio introduction"
+				/><br />
+				<a
+					href="#contact"
+					class="inline-block bg-[#00a3e0] text-white px-8 py-4 rounded-lg text-lg font-medium mt-6 hover:bg-[#00387c] hover:scale-105 transition-all duration-300 animate-pulse"
+					aria-label="Navigate to contact section"
+					>Contact Me</a
+				>
+			</div>
+		</section>
 
-  <!-- Navbar -->
-  <nav id="navbar" class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg" role="navigation"
-    aria-label="Main navigation">
-    <div class="container mx-auto px-3 py-2 flex items-center justify-between">
-      <a href="#" class="flex items-center" aria-label="Dipanshu's Portfolio Home">
-        <img src="https://pbs.twimg.com/profile_images/1816474701360685056/-JaD_SYC_400x400.jpg" alt="Dipanshu's Logo"
-          width="50" height="50"
-          class="rounded-full hover:scale-110 transition-transform duration-300 hover:shadow-[0_0_10px_rgb(23,182,255)]">
-      </a>
-      <ul class="flex space-x-6">
-        <li><a
-            class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
-            href="#about">About</a></li>
-        <li><a
-            class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
-            href="#skills">Skills</a></li>
-        <li><a
-            class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
-            href="#projects">Projects</a></li>
-        <li><a
-            class="nav-link font-medium text-white hover:text-[#00a3e0] transition-colors duration-300 px-3 py-2 rounded"
-            href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+		<!-- About Section -->
+		<section
+			id="about"
+			class="py-20 bg-gray-50"
+			aria-labelledby="about-heading"
+		>
+			<div class="container mx-auto px-4 text-center">
+				<h2
+					id="about-heading"
+					class="text-4xl font-bold text-[#00387c] uppercase mb-6"
+				>
+					About Me
+				</h2>
+				<p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+					I am a B.Tech Computer Science Engineer at SRM IST, passionate about
+					innovation and technology with hands-on experience in Web development,
+					data analysis, AI and Machine Learning. I am passionate about
+					leveraging technology to solve real-world problems and I am eager to
+					contribute to innovative projects.
+				</p>
+				<a
+					href="https://drive.google.com/file/d/18nIYKphKTc5L2kWcubP9OGQGWGvev6f2/view?usp=drive_link"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-block bg-[#00a3e0] text-white px-8 py-4 rounded-lg text-lg font-medium mt-6 hover:bg-[#00387c] hover:scale-105 transition-all duration-300 animate-pulse"
+					aria-label="View Dipanshu's resume"
+				>
+					Resume
+				</a>
+			</div>
+		</section>
 
-  <!-- Hero Section -->
-  <section class="hero-section text-white text-center py-20 flex items-center justify-center min-h-[90vh]"
-    role="banner">
-    <div class="container mx-auto px-4">
-      <h1 id="animated-coding" class="text-5xl md:text-6xl font-bold mb-8">
-        <span class="text-[#64ffda] font-mono">🎅</span>
-        <span id="coding-animation" class="font-mono"></span>
-        <span class="cursor" aria-hidden="true">|</span>
-      </h1>
-      <img src="https://i.postimg.cc/4y8DZGTB/carbon.png" class="mx-auto max-w-full w-[650px]" width="650"
-        alt="Code snippet showing Dipanshu's portfolio introduction"><br>
-      <a href="#contact"
-        class="inline-block bg-[#00a3e0] text-white px-8 py-4 rounded-lg text-lg font-medium mt-6 hover:bg-[#00387c] hover:scale-105 transition-all duration-300 animate-pulse"
-        aria-label="Navigate to contact section">Contact Me</a>
-    </div>
-  </section>
+		<!-- Skills Section -->
+		<section
+			id="skills"
+			class="bg-white py-20"
+			aria-labelledby="skills-heading"
+		>
+			<div class="container mx-auto px-4">
+				<h2
+					id="skills-heading"
+					class="text-4xl font-bold text-[#00387c] uppercase mb-12 text-center"
+				>
+					Skills
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+					<div class="skill-card">
+						<i
+							class="fas fa-code text-6xl mb-4 text-blue-600 hover:scale-125 transition-transform duration-300"
+							aria-hidden="true"
+						></i>
+						<h4 class="text-xl font-semibold mb-2">Programming Languages</h4>
+						<p class="text-gray-700">C, C++, Python, JavaScript</p>
+					</div>
+					<div class="skill-card">
+						<i
+							class="fas fa-brain text-6xl mb-4 text-cyan-500 hover:scale-125 transition-transform duration-300"
+							aria-hidden="true"
+						></i>
+						<h4 class="text-xl font-semibold mb-2">AI</h4>
+						<p class="text-gray-700">
+							Machine Learning, LLM, Generative AI, Power BI
+						</p>
+					</div>
+					<div class="skill-card">
+						<i
+							class="fas fa-globe text-6xl mb-4 text-blue-700 hover:scale-125 transition-transform duration-300"
+							aria-hidden="true"
+						></i>
+						<h4 class="text-xl font-semibold mb-2">Web Development</h4>
+						<p class="text-gray-700">
+							HTML, CSS, Tailwind, JavaScript, NodeJS, SQL
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-gray-50" aria-labelledby="about-heading">
-    <div class="container mx-auto px-4 text-center">
-      <h2 id="about-heading" class="text-4xl font-bold text-[#00387c] uppercase mb-6">About Me</h2>
-      <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">I am a B.Tech Computer Science
-        Engineer at SRM IST, passionate about innovation and technology with hands-on experience in Web
-        development, data analysis, AI and Machine Learning. I am passionate about leveraging technology to solve
-        real-world problems and I am eager to contribute to innovative projects.</p>
-      <button
-        onclick="window.open('https://drive.google.com/file/d/1FNmdXagROcfyOgSScBrjXoEZPX2x_TFH/view?usp=drivesdk');"
-        class="bg-[#00a3e0] text-white px-8 py-4 rounded-lg text-lg font-medium mt-6 hover:bg-[#00387c] hover:scale-105 transition-all duration-300 animate-pulse"
-        aria-label="View Dipanshu's resume">Resume</button>
-    </div>
-  </section>
+		<!-- Projects Section -->
+		<section
+			id="projects"
+			class="py-20 bg-gray-50"
+			aria-labelledby="projects-heading"
+		>
+			<div class="container mx-auto px-4">
+				<h2
+					id="projects-heading"
+					class="text-4xl font-bold text-[#00387c] uppercase mb-12 text-center"
+				>
+					Projects
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<a
+						href="https://edplan.vercel.app"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="project-card bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:bg-[#1cc2ff] transition-all duration-300 block"
+					>
+						<img
+							src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+							class="w-full h-48 object-cover"
+							loading="lazy"
+							alt="Website Project - Modern interface"
+						/>
+						<div class="p-6">
+							<h5 class="text-xl font-semibold mb-3">Education plan website</h5>
+							<p class="text-gray-700">
+								Designed and developed a user-friendly Edplan website using web
+								development technologies such as HTML, CSS, Tailwind,
+								JavaScript, React and a backend framework FastAPI for dynamic
+								content and database management.
+							</p>
+						</div>
+					</a>
+					<div
+						class="project-card bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:bg-[#1cc2ff] transition-all duration-300"
+					>
+						<img
+							src="https://analyticsindiamag.com/wp-content/uploads/2020/03/SBI-Stock-Prediction.png"
+							class="w-full h-48 object-cover"
+							loading="lazy"
+							alt="Stock Predictor Project - Stock market analysis visualization"
+						/>
+						<div class="p-6">
+							<h5 class="text-xl font-semibold mb-3">
+								Stock predictor - Machine Learning
+							</h5>
+							<p class="text-gray-700">
+								Built a stock price prediction system using LSTM networks,
+								ensuring accurate forecasts through preprocessing historical
+								data and the incorporation of external factors such as financial
+								reports and market sentiment, we also evaluated model
+								performance and visualized trends to provide actionable insights
+								for informed decision-making while buying stocks.
+							</p>
+						</div>
+					</div>
+					<div
+						class="project-card bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:bg-[#1cc2ff] transition-all duration-300"
+					>
+						<img
+							src="https://bitcoinist.com/wp-content/uploads/2024/01/Solana-200.jpeg"
+							class="w-full h-48 object-cover"
+							loading="lazy"
+							alt="CharityChain Project - Blockchain-based charity platform"
+						/>
+						<div class="p-6">
+							<h5 class="text-xl font-semibold mb-3">
+								CharityChain Transparent Fund Tracking System
+							</h5>
+							<p class="text-gray-700">
+								The project explores how blockchain can improve fund raising
+								platforms. We compared various consensus algorithms to identify
+								a hybrid blockchain platform called Solana. We created a live
+								website ultimately aiming to increase donor trust and
+								operational effectiveness in blockchain-based charity platforms.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="bg-white py-20" aria-labelledby="skills-heading">
-    <div class="container mx-auto px-4">
-      <h2 id="skills-heading" class="text-4xl font-bold text-[#00387c] uppercase mb-12 text-center">Skills</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div class="skill-card">
-          <i class="fas fa-code text-6xl mb-4 text-blue-600 hover:scale-125 transition-transform duration-300"
-            aria-hidden="true"></i>
-          <h4 class="text-xl font-semibold mb-2">Programming Languages</h4>
-          <p class="text-gray-700">C, C++, Python, JavaScript</p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-brain text-6xl mb-4 text-cyan-500 hover:scale-125 transition-transform duration-300"
-            aria-hidden="true"></i>
-          <h4 class="text-xl font-semibold mb-2">AI</h4>
-          <p class="text-gray-700">Machine Learning, LLM, Generative AI, Power BI</p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-globe text-6xl mb-4 text-blue-700 hover:scale-125 transition-transform duration-300"
-            aria-hidden="true"></i>
-          <h4 class="text-xl font-semibold mb-2">Web Development</h4>
-          <p class="text-gray-700">HTML, CSS, Tailwind, JavaScript, NodeJS, SQL</p>
-        </div>
-      </div>
-    </div>
-  </section>
+		<!-- Contact Section -->
+		<section
+			id="contact"
+			class="bg-white py-5"
+			aria-labelledby="contact-heading"
+		>
+			<div class="container mx-auto px-4 max-w-xl">
+				<h2
+					id="contact-heading"
+					class="text-4xl font-bold text-[#00387c] uppercase mb-5 text-center"
+				>
+					Contact Me
+				</h2>
+				<form class="space-y-2" id="contact-form" aria-label="Contact form">
+					<div>
+						<label for="name" class="block text-gray-700 font-medium mb-2"
+							>Name</label
+						>
+						<input
+							type="text"
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00a3e0] focus:border-transparent"
+							id="name"
+							name="name"
+							required
+							aria-required="true"
+						/>
+					</div>
+					<div>
+						<label for="email" class="block text-gray-700 font-medium mb-2"
+							>Email</label
+						>
+						<input
+							type="email"
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00a3e0] focus:border-transparent"
+							id="email"
+							name="email"
+							required
+							aria-required="true"
+						/>
+					</div>
+					<div>
+						<label for="message" class="block text-gray-700 font-medium mb-5"
+							>Message</label
+						>
+						<textarea
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00a3e0] focus:border-transparent"
+							id="message"
+							name="message"
+							rows="2"
+							required
+							aria-required="true"
+						></textarea>
+					</div>
+					<div
+						id="form-status"
+						class="hidden text-center p-4 rounded-lg"
+						role="alert"
+						aria-live="polite"
+					></div>
+					<button
+						type="submit"
+						class="w-full bg-[#00a3e0] text-white px-5 py-2 rounded-lg text-lg font-medium hover:bg-[#00387c] transition-colors duration-300"
+					>
+						Send
+					</button>
+				</form>
+			</div>
+		</section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-gray-50" aria-labelledby="projects-heading">
-    <div class="container mx-auto px-4">
-      <h2 id="projects-heading" class="text-4xl font-bold text-[#00387c] uppercase mb-12 text-center">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div
-          class="project-card bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:bg-[#1cc2ff] transition-all duration-300">
-          <img src="https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/6c520245c9e9d0e1d273d2d0097ade82cce603c0" class="w-full h-48 object-cover"
-            alt=" Website Project - Modern interface">
-          <div class="p-6">
-            <h5 class="text-xl font-semibold mb-3">Eduction plan website</h5>
-            <p class="text-gray-700">Designed and developed a user-friendly Edplan website using web development
-              technologies such as HTML, CSS, Tailwind, JavaScript, React and a backend framework FastAPI for dynamic content
-              and database management.</p>
-          </div>
-        </div>
-        <div
-          class="project-card bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:bg-[#1cc2ff] transition-all duration-300">
-          <img src="https://analyticsindiamag.com/wp-content/uploads/2020/03/SBI-Stock-Prediction.png"
-            class="w-full h-48 object-cover" alt="Stock Predictor Project - Stock market analysis visualization">
-          <div class="p-6">
-            <h5 class="text-xl font-semibold mb-3">Stock predictor - Machine Learning</h5>
-            <p class="text-gray-700">Built a stock price prediction system using LSTM networks, ensuring accurate
-              forecasts through preprocessing historical data and the incorporation of external factors such as
-              financial reports and market sentiment, we also evaluated model performance and visualized trends to
-              provide actionable insights for informed decision-making while buying stocks.
-            </p>
-          </div>
-        </div>
-        <div
-          class="project-card bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 hover:bg-[#1cc2ff] transition-all duration-300">
-          <img src="https://bitcoinist.com/wp-content/uploads/2024/01/Solana-200.jpeg" class="w-full h-48 object-cover"
-            alt="CharityChain Project - Blockchain-based charity platform">
-          <div class="p-6">
-            <h5 class="text-xl font-semibold mb-3">CharityChain Transparent Fund Tracking System</h5>
-            <p class="text-gray-700">The project explores how blockchain can improve fund raising platforms. We compared
-              various consensus algorithms to identify a hybrid blockchain platform called Solana. We created a live
-              website ultimately aiming to increase donor trust and operational effectiveness in blockchain-based
-              charity platforms.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+		<!-- Footer -->
+		<footer class="footer bg-gray-900 text-white py-5" role="contentinfo">
+			<div class="container mx-auto px-4 text-center">
+				<div class="socials flex justify-center space-x-6 mb-6">
+					<a
+						href="https://linkedin.com/in/dipanshukapri"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-[#0077B5] hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
+						aria-label="Visit Dipanshu's LinkedIn profile"
+						><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i
+					></a>
+					<a
+						href="https://x.com/DipanshuKapri"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-gray-300 hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
+						aria-label="Visit Dipanshu's Twitter profile"
+						><i class="fab fa-twitter fa-2x" aria-hidden="true"></i
+					></a>
+					<a
+						href="https://instagram.com/dipanshukapri"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-[#E4405F] instagram-link hover:scale-110 transition-all duration-300"
+						aria-label="Visit Dipanshu's Instagram profile"
+						><i class="fab fa-instagram fa-2x" aria-hidden="true"></i
+					></a>
+					<a
+						href="https://github.com/Dipanshu-5"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-gray-300 hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
+						aria-label="Visit Dipanshu's GitHub profile"
+						><i class="fab fa-github fa-2x" aria-hidden="true"></i
+					></a>
+					<a
+						href="mailto:dipanshukapri25@gmail.com"
+						class="text-[#00a3e0] hover:text-[#EA4335] hover:scale-110 transition-all duration-300"
+						aria-label="Send email to Dipanshu"
+						><i class="fas fa-envelope fa-2x" aria-hidden="true"></i
+					></a>
+				</div>
+				<p class="text-gray-400">© 2026 Dipanshu. All Rights Reserved.</p>
+			</div>
+		</footer>
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-white py-5" aria-labelledby="contact-heading">
-    <div class="container mx-auto px-4 max-w-xl">
-      <h2 id="contact-heading" class="text-4xl font-bold text-[#00387c] uppercase mb-5 text-center">Contact Me</h2>
-      <form class="space-y-2" id="contact-form" aria-label="Contact form">
-        <div>
-          <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
-          <input type="text"
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00a3e0] focus:border-transparent"
-            id="name" name="name" required aria-required="true">
-        </div>
-        <div>
-          <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-          <input type="email"
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00a3e0] focus:border-transparent"
-            id="email" name="email" required aria-required="true">
-        </div>
-        <div>
-          <label for="message" class="block text-gray-700 font-medium mb-5">Message</label>
-          <textarea
-            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00a3e0] focus:border-transparent"
-            id="message" name="message" rows="2" required aria-required="true"></textarea>
-        </div>
-        <div id="form-status" class="hidden text-center p-4 rounded-lg" role="alert" aria-live="polite"></div>
-        <button type="submit"
-          class="w-full bg-[#00a3e0] text-white px-5 py-2 rounded-lg text-lg font-medium hover:bg-[#00387c] transition-colors duration-300">Send</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer bg-gray-900 text-white py-5" role="contentinfo">
-    <div class="container mx-auto px-4 text-center">
-      <div class="socials flex justify-center space-x-6 mb-6">
-        <a href="https://linkedin.com/in/dipanshukapri" target="_blank" rel="noopener noreferrer"
-          class="text-white hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
-          aria-label="Visit Dipanshu's LinkedIn profile"><i class="fab fa-linkedin fa-2x" aria-hidden="true"></i></a>
-        <a href="https://x.com/DipanshuKapri" target="_blank" rel="noopener noreferrer"
-          class="text-white hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
-          aria-label="Visit Dipanshu's Twitter profile"><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
-        <a href="https://instagram.com/dipanshukapri" target="_blank" rel="noopener noreferrer"
-          class="text-white hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
-          aria-label="Visit Dipanshu's Instagram profile"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i></a>
-        <a href="https://github.com/Dipanshu-5" target="_blank" rel="noopener noreferrer"
-          class="text-white hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
-          aria-label="Visit Dipanshu's GitHub profile"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a>
-        <a href="mailto:dipanshukapri25@gmail.com"
-          class="text-white hover:text-[#00a3e0] hover:scale-110 transition-all duration-300"
-          aria-label="Send email to Dipanshu"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i></a>
-      </div>
-      <p class="text-gray-400">© 2026 Dipanshu. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Custom JavaScript -->
-  <script src="script.js"></script>
-</body>
-
+		<!-- Custom JavaScript -->
+		<script src="script.js"></script>
+	</body>
 </html>
